@@ -232,9 +232,9 @@ img {
 ===================================================== */
 
 .sidebar-decoration {
-    position: absolute;
-    bottom: 70px;
-    left: 42px;
+    position: static;
+    margin-top: auto;
+    padding-top: 35px;
     font-family: "Caveat", cursive;
     font-size: 22px;
     transform: rotate(-8deg);
