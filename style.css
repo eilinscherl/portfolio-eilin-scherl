@@ -884,13 +884,10 @@ footer {
 }
 
 
-/* =====================================================
-   HANDY – BIS 800PX
-===================================================== */
+/* 
 
 /* =====================================================
-   MOBILE – SIDEBAR VOLLSTÄNDIG ERHALTEN
-   BIS 800PX
+   RESPONSIVE – LINKES SIDEBAR + RECHTER INHALT
 ===================================================== */
 
 @media (max-width: 800px) {
@@ -902,9 +899,9 @@ footer {
     }
 
 
-    /* =================================================
+    /* ================================================
        HEADER
-    ================================================= */
+    ================================================ */
 
     .topbar {
         position: fixed;
@@ -917,8 +914,8 @@ footer {
         padding: 0 15px;
 
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
 
         z-index: 1000;
     }
@@ -928,179 +925,206 @@ footer {
         letter-spacing: 4px;
     }
 
+    /* Obere Navigation ausblenden */
     .navigation {
         display: none;
     }
 
 
-    /* =================================================
-       SIDEBAR
-       KOMPLETT SICHTBAR
-    ================================================= */
+    /* ================================================
+       LINKE SIDEBAR
+       BLEIBT LINKS
+    ================================================ */
 
     .sidebar {
-        position: relative;
+        position: fixed;
 
-        top: auto;
-        left: auto;
+        left: 0;
+        top: 60px;
 
-        width: 100%;
-        height: auto;
+        width: 230px;
+        height: calc(100vh - 60px);
 
-        min-height: auto;
+        padding: 25px 18px;
 
-        padding: 35px 25px 55px;
+        background: var(--sage);
 
-        display: block;
+        overflow-y: auto;
+        overflow-x: hidden;
 
-        overflow: visible;
+        z-index: 900;
     }
 
 
-    /* FOTO BLEIBT SICHTBAR */
+    /* Foto bleibt */
 
     .portrait {
         display: block;
 
-        width: min(260px, 100%);
+        width: 100%;
 
-        margin: 0 auto 35px;
+        margin-bottom: 25px;
     }
 
 
-    /* PERSÖNLICHE DATEN BLEIBEN SICHTBAR */
+    /* Persönliche Daten bleiben */
 
     .personal-information {
         display: flex;
 
         flex-direction: column;
 
-        gap: 18px;
-
-        width: min(320px, 100%);
-
-        margin: 0 auto;
+        gap: 13px;
     }
 
     .information-item {
-        font-size: 11px;
-        line-height: 1.5;
+        font-size: 9px;
+        line-height: 1.4;
+
+        gap: 8px;
+    }
+
+    .information-icon {
+        width: 18px;
+        min-width: 18px;
     }
 
 
-    /* TRENNLINIE */
+    /* Trennlinie */
 
     .sidebar-line {
         display: block;
 
-        width: min(320px, 100%);
+        width: 100%;
 
-        margin: 35px auto 25px;
+        margin: 25px 0;
     }
 
 
-    /* =================================================
+    /* ================================================
        BUTTONS
-    ================================================= */
+    ================================================ */
 
     .filter {
-        width: min(320px, 100%);
-
-        margin: 0 auto;
-
-        text-align: left;
+        width: 100%;
     }
 
     .filter-button {
         display: inline-block;
 
-        margin-right: 6px;
-        margin-bottom: 9px;
+        margin-right: 4px;
+        margin-bottom: 7px;
 
-        padding: 7px 14px;
+        padding: 6px 10px;
 
-        font-size: 9px;
+        font-size: 8px;
     }
 
 
-    /* =================================================
-       DEKORATION
-       BLEIBT SICHTBAR
-    ================================================= */
+    /* ================================================
+       KREATIVITÄT
+    ================================================ */
 
     .sidebar-decoration {
         position: static;
 
         display: block;
 
-        width: min(320px, 100%);
+        margin-top: 30px;
 
-        margin: 45px auto 0;
+        font-size: 18px;
 
         transform: rotate(-8deg);
     }
 
 
-    /* =================================================
-       HAUPTINHALT
-       KOMMT UNTER DIE SIDEBAR
-    ================================================= */
+    /* ================================================
+       RECHTER HAUPTINHALT
+    ================================================ */
 
     main {
-        margin-left: 0;
+        margin-left: 230px;
 
-        width: 100%;
+        width: calc(100% - 230px);
 
         padding-top: 60px;
     }
 
 
-    /* HERO */
+    /* ================================================
+       HERO
+    ================================================ */
 
     .hero {
-        grid-template-columns: 1fr;
-
         width: 100%;
+
+        display: block;
 
         min-height: auto;
 
-        padding: 40px 20px;
+        padding: 30px 18px;
     }
 
 
-    /* RECHTE DEKO IM HERO */
+    .hero-content {
+        width: 100%;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(28px, 7vw, 42px);
+    }
+
+
+    .hero h1 small {
+        font-size: clamp(17px, 5vw, 25px);
+    }
+
+
+    .intro {
+        font-size: 9px;
+        line-height: 1.6;
+    }
+
+
+    /* Rechte Hero-Dekoration ausblenden */
 
     .hero-visual {
         display: none;
     }
 
 
-    /* PORTFOLIO */
+    /* ================================================
+       PROJEKTE
+    ================================================ */
 
     .portfolio {
         width: 100%;
 
-        padding: 45px 20px 60px;
+        padding: 35px 18px 50px;
     }
-
 
     .project-grid {
         grid-template-columns: 1fr;
     }
 
 
-    /* ÜBER MICH */
+    /* ================================================
+       ÜBER MICH
+    ================================================ */
 
     .about {
-        grid-template-columns: 1fr;
-
         width: 100%;
 
-        padding: 50px 20px;
+        display: block;
+
+        padding: 40px 18px;
     }
 
 
-    /* KONTAKT */
+    /* ================================================
+       KONTAKT
+    ================================================ */
 
     .contact {
         width: 100%;
@@ -1111,63 +1135,41 @@ footer {
 
 /* =====================================================
    SEHR KLEINE HANDYS
-   BIS 480PX
 ===================================================== */
 
 @media (max-width: 480px) {
 
     .sidebar {
-        padding: 30px 18px 50px;
+        width: 190px;
+
+        padding: 20px 12px;
     }
 
-    .portrait {
-        width: min(230px, 100%);
+    main {
+        margin-left: 190px;
+
+        width: calc(100% - 190px);
     }
 
-    .personal-information {
-        width: 100%;
-    }
-
-    .sidebar-line,
-    .filter,
-    .sidebar-decoration {
-        width: 100%;
+    .information-item {
+        font-size: 8px;
     }
 
     .filter-button {
-        font-size: 8px;
-        padding: 7px 12px;
+        font-size: 7px;
+        padding: 5px 8px;
+    }
+
+    .sidebar-decoration {
+        font-size: 16px;
+    }
+
+    .hero {
+        padding: 25px 12px;
+    }
+
+    .portfolio {
+        padding: 30px 12px 45px;
     }
 
 }
-
-Dann sieh
-
-@media (max-width: 480px) {
-
-    /* -------------------------------------------------
-       SIDEBAR
-    ------------------------------------------------- */
-
-    .sidebar {
-        width: 110px;
-
-        padding: 18px 7px;
-    }
-
-    .filter {
-        gap: 7px;
-    }
-
-    .filter-button {
-        padding: 7px 3px;
-
-        font-size: 7px;
-        letter-spacing: .7px;
-    }
-
-
-
-/* =====================================================
-   RESPONSIVE DESIGN – ENDE
-===================================================== */
