@@ -1163,6 +1163,11 @@ footer {
     .sidebar-decoration {
         font-size: 16px;
     }
+	
+	 .qualities {
+        font-size: 8px;
+    }
+	
 
     .hero {
         padding: 25px 12px;
@@ -1170,6 +1175,26 @@ footer {
 
     .portfolio {
         padding: 30px 12px 45px;
+    }
+
+	 .about h2 {
+        font-size: 25px;
+    }
+
+	 .small-info p {
+        font-size: 10px;
+    }
+	
+	 .small-info h3 {
+        font-size: 23px;
+    }
+
+	 .contact {
+        font-size: 20px;
+    }
+
+	 .footer {
+        font-size: 7px;
     }
 
 }
