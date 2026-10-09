@@ -1236,11 +1236,7 @@ footer {
 	}
 
 	.footer{
-		font-size: 6px;
+		display: none;
 	}
-
-	.footer-name {
-    	display: block;
-    }
 	
 }
