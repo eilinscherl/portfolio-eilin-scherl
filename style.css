@@ -1203,6 +1203,7 @@ footer {
 
 	 footer {
         font-size: 7px;
+		 padding-right:10px;
     }
 
 }
@@ -1236,7 +1237,6 @@ footer {
 
 	.footer{
 		font-size: 6px;
-    	padding-right: 10px;
 	}
 
 	.footer-name {
