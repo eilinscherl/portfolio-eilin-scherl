@@ -1214,6 +1214,22 @@ footer {
         font-size: 6px;
     }
 
+	.portfolio-heading h2{
+        font-size: 30px;
+    }
+
+	.small-info p {
+        font-size: 8px;
+	}
+
+	.small-info h3 {
+        font-size: 18px;
+    }
+
+	.klickmich {
+		font-size:13px;
+	}
+		
 	.about h2 {
         font-size: 20px;
     }
